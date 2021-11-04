@@ -1,5 +1,10 @@
+import os
+import sys
 import ast
 import json
+
+root = os.environ["LAMBDA_TASK_ROOT"]
+sys.path.insert(0, root)
 import boto3
 
 ec2 = boto3.client('ec2')
