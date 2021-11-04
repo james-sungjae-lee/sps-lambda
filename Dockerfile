@@ -17,7 +17,7 @@ RUN sudo ./aws/install
 RUN pip3 install boto3==1.19.10
 
 # git clone
-RUN git clone https://github.com/odobenuskr/spc-lambda.git
+RUN git clone https://github.com/odobenuskr/sps-lambda.git
 
 # move lambdafunc.py
 RUN cp spc-lambda/lambda_function.py /var/task/
