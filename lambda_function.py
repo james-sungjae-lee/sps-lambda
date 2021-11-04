@@ -1,16 +1,10 @@
-import os
-import sys
 import ast
 import json
-
-root = os.environ["LAMBDA_TASK_ROOT"]
-sys.path.insert(0, root)
 import boto3
 
 ec2 = boto3.client('ec2')
-print(boto3.__version__)
 
-def handler(event, context):
+def lambda_handler(event, context):
     instance_types = ast.literal_eval(event['instance_types'])
     regions = ast.literal_eval(event['regions'])
     
