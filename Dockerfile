@@ -21,6 +21,6 @@ RUN pip3 install boto3==1.19.10
 RUN git clone https://github.com/odobenuskr/sps-lambda.git
 
 # move lambdafunc.py
-RUN cp spc-lambda/lambda_function.py /var/task/
+RUN cp sps-lambda/lambda_function.py /var/task/
 
 CMD ["lambda_function.handler"]
