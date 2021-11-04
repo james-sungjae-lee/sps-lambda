@@ -12,7 +12,7 @@ RUN yum install unzip -y
 RUN pip3 uninstall awscli -y
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 RUN unzip awscliv2.zip
-RUN sudo ./aws/install
+RUN aws/install
 
 RUN pip3 uninstall boto3 -y
 RUN pip3 install boto3==1.19.10
