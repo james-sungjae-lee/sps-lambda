@@ -14,6 +14,7 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
 RUN unzip awscliv2.zip
 RUN sudo ./aws/install
 
+RUN pip3 uninstall boto3 -y
 RUN pip3 install boto3==1.19.10
 
 # git clone
